@@ -8,20 +8,7 @@ export function formatHour(hour: string) {
 }
 
 export function formatMonth(date: string) {
-  const months = [
-    'Jan',
-    'Fev',
-    'Mar',
-    'Abr',
-    'Maio',
-    'Jun',
-    'Jul',
-    'Ago',
-    'Set',
-    'Out',
-    'Nov',
-    'Dez'
-  ];
+  const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
   return months[parseInt(date.split('-')[1]) - 1];
 }
 
@@ -30,7 +17,5 @@ export function formatDay(date: string) {
 }
 
 export function formatYear(date: string) {
-  return new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(
-    new Date(date)
-  );
+  return new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(new Date(date));
 }

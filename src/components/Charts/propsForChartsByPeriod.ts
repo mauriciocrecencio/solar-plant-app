@@ -1,5 +1,16 @@
 import { Colors } from '../../constants';
-import { formatDay, formatHour, formatYear } from '../../utils';
+import { formatDay, formatHour, formatYear } from '../../utils/dataFormatters';
+
+const backgroundProps = {
+  backgroundColor: Colors.chartBackground,
+  backgroundGradientFrom: Colors.chartBackground,
+  backgroundGradientTo: Colors.chartBackground
+};
+
+const colors = {
+  color: () => Colors.chartBackground2,
+  labelColor: () => Colors.chartLabel
+};
 
 export const propsForChartsByPeriod = {
   hourly: {
@@ -9,13 +20,9 @@ export const propsForChartsByPeriod = {
     withInnerLines: false,
     withOuterLines: false,
     chartConfig: {
+      ...backgroundProps,
+      ...colors,
       strokeWidth: 1,
-      backgroundColor: Colors.chartBackground,
-      backgroundGradientFrom: Colors.chartBackground,
-      backgroundGradientTo: Colors.chartBackground,
-      decimalPlaces: 0,
-      color: (opacity = 1, index) => Colors.lowEnergyGenerated,
-      labelColor: (opacity = 1) => Colors.chartLabel,
       style: {
         borderRadius: 16
       },
@@ -23,7 +30,7 @@ export const propsForChartsByPeriod = {
         r: '3'
       }
     },
-    formatXLabel: (month) => formatHour(month),
+    formatXLabel: (month: string) => formatHour(month),
     style: {
       paddingTop: 32,
       borderRadius: 16
@@ -37,7 +44,7 @@ export const propsForChartsByPeriod = {
     horizontalLabelRotation: 270,
     withInnerLines: true,
     withOuterLines: true,
-    formatXLabel: (month) => formatDay(month),
+    formatXLabel: (month: string) => formatDay(month),
     bezier: false,
     style: {
       paddingRight: 32,
@@ -45,16 +52,13 @@ export const propsForChartsByPeriod = {
       borderRadius: 16
     },
     chartConfig: {
+      ...backgroundProps,
+      ...colors,
       strokeWidth: 1,
       propsForBackgroundLines: {
         strokeDasharray: '',
         strokeOpacity: 0.2
       },
-      backgroundColor: Colors.chartBackground,
-      backgroundGradientFrom: Colors.chartBackground,
-      backgroundGradientTo: Colors.chartBackground,
-      color: (opacity = 1, index) => '#a1a1a1',
-      labelColor: (opacity = 1) => Colors.chartLabel,
       propsForDots: {
         r: '3'
       }
@@ -63,7 +67,7 @@ export const propsForChartsByPeriod = {
   yearly: {
     segments: 4,
     withInnerLines: false,
-    formatXLabel: (year) => formatYear(year),
+    formatXLabel: (year: string) => formatYear(year),
     bezier: true,
     fromZero: true,
     style: {
@@ -72,18 +76,13 @@ export const propsForChartsByPeriod = {
       borderRadius: 16
     },
     chartConfig: {
+      ...backgroundProps,
+      ...colors,
       strokeWidth: 1,
       propsForBackgroundLines: {
         strokeDasharray: '',
         strokeOpacity: 0.2
       },
-      backgroundColor: Colors.chartBackground,
-      backgroundGradientFrom: Colors.chartBackground,
-      backgroundGradientTo: Colors.chartBackground,
-      decimalPlaces: 0,
-      color: (opacity = 1, index) => '#a1a1a1',
-
-      labelColor: (opacity = 1) => '#4d4d4d',
       style: {
         borderRadius: 16
       },

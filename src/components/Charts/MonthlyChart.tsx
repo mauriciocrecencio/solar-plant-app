@@ -1,8 +1,6 @@
-import { BarChart, LineChart } from 'react-native-chart-kit';
-import { Dimensions, ScrollView } from 'react-native';
-import { Text as TextSVG } from 'react-native-svg';
-import { PlantData } from '../../interfaces';
-import { formatGeneration, formatMonth } from '../../utils';
+import { BarChart } from 'react-native-chart-kit';
+import { Dimensions } from 'react-native';
+import { formatGeneration, formatMonth } from '../../utils/dataFormatters';
 import { usePlantDataStore } from '../../store/usePlantData';
 
 export function MonthlyChart() {
@@ -14,9 +12,7 @@ export function MonthlyChart() {
     datasets: [
       {
         data: generation,
-        colors: generation.map(
-          (g, i) => () => g < expected[i] ? '#f88b8b' : '#83fb8f'
-        )
+        colors: generation.map((g, i) => () => g < expected[i] ? '#f88b8b' : '#83fb8f')
       }
     ]
   };

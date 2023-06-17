@@ -1,6 +1,6 @@
 import { LineChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
-import { formatGeneration } from '../../utils';
+import { formatGeneration } from '../../utils/dataFormatters';
 import { usePlantDataStore } from '../../store/usePlantData';
 import { propsForChartsByPeriod } from './propsForChartsByPeriod';
 

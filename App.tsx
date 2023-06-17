@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { Main } from './src/Main';
+import { Main } from './src/components/Main';
 import { QueryClientProvider } from 'react-query';
 import { queryClient } from './src/lib/queryClient';
 

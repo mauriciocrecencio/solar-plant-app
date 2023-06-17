@@ -3,8 +3,6 @@ import { Colors } from '../../constants';
 
 export const Container = styled.View`
   flex: 1;
-  /* width: 350px; */
-  /* height: 350px; */
   align-items: center;
   justify-content: center;
 `;

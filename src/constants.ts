@@ -14,6 +14,7 @@ export enum PeriodsShort {
 
 export const Colors = {
   chartBackground: '#f3f3f3',
+  chartBackground2: '#a1a1a1',
   chartLabel: '#4d4d4d',
   lowEnergyGenerated: '#f88b8b',
   goodEnergyGenerated: '#83fb8f',
@@ -28,6 +29,4 @@ export enum TotalsFormatted {
   trees = 'Árvores salvas'
 }
 
-export const periodsArray = Object.values(Periods).filter((v) =>
-  isNaN(Number(v))
-);
+export const periodsArray = Object.values(Periods).filter((v) => isNaN(Number(v)));

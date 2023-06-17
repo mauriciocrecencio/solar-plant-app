@@ -1,20 +1,17 @@
 import { SafeAreaView, WelcomeContainer, LoadingContainer } from './styles';
-import { Text } from '../components/Text';
-import { Chart } from '../components/Charts';
-import { PeriodList } from '../components/PeriodList';
-import useFetchPlantData from '../services/getPlantData';
-import { usePeriodSelectedStore } from '../store/useSelectedPeriod';
-import TotalsAboutPlant from '../components/TotalsAboutPlant';
-import IsPlantGeneratingToday from '../components/IsPlantGeneratingToday';
+import { Text } from '../Text';
+import { Chart } from '../Charts';
+import { PeriodList } from '../PeriodList';
+import useFetchPlantData from '../../services/getPlantData';
+import { usePeriodSelectedStore } from '../../store/useSelectedPeriod';
+import TotalsAboutPlant from '../TotalsAboutPlant';
+import IsPlantGeneratingToday from '../IsPlantGeneratingToday';
 import { ActivityIndicator } from 'react-native';
-import UnavailableData from '../components/UnavailableData';
+import UnavailableData from '../UnavailableData';
 
 export function Main() {
-  const selectedPeriod = usePeriodSelectedStore(
-    (state) => state.selectedPeriod
-  );
-  const { data, isFetching, isError, refetch } =
-    useFetchPlantData(selectedPeriod);
+  const selectedPeriod = usePeriodSelectedStore((state) => state.selectedPeriod);
+  const { data, isFetching, isError, refetch } = useFetchPlantData(selectedPeriod);
 
   if (isError) {
     return (
@@ -31,7 +28,6 @@ export function Main() {
           Bem vindo
         </Text>
       </WelcomeContainer>
-      {/* {isError ? <UnavailableData/> :} */}
       {isFetching ? (
         <LoadingContainer>
           <ActivityIndicator size={'large'} />

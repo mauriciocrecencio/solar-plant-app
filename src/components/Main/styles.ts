@@ -15,17 +15,5 @@ export const SafeAreaView = styled.SafeAreaView`
 `;
 
 export const WelcomeContainer = styled.View`
-  /* flex: 1; */
   padding: 8px 8px 0 14px;
 `;
-
-export const ContentContainer = styled.View`
-  height: 73px;
-  margin-top: 34px;
-`;
-
-export const MenuContainer = styled.View`
-  flex: 1;
-`;
-
-export const FooterContainer = styled.SafeAreaView``;
