@@ -38,7 +38,7 @@ A maior dificuldade nesse projeto foi na exibição do gráfico diário. A tela 
 ## Observações
 
 - Talvez você ache estranho o mês de Maio de 2023 estar com a barra verde, indicando que naquele período foi gerado o kWh esperado. Porém, no retorno da API, o **expected** não está retornando a mesma quantidade do **generation**. Sei que isso deveria ser tratado em um projeto real, mas imagino que só foi um descuide da API para o teste.
-- Em geral, tenho noção de que para um projeto real, muitas melhorias deveriam ser feitas, como: tipagem mais completa e robusta, maior cobertura de testes, componentes e uma aplicação mais resilientes, um padrão de commits e um fluxo de trabalho (git flow) e etc...
+- Em geral, tenho noção de que para um projeto real, muitas melhorias deveriam ser feitas, como: tipagem mais completa e robusta, maior cobertura de testes, componentes e uma aplicação mais resilientes, um tratamento de responsividade melhor, um padrão de commits e um fluxo de trabalho (git flow) e etc...
 
 ### 🏠 [Homepage](https://github.com/mauriciocrecencio/solar-plant-app)
 
