@@ -1,5 +1,4 @@
-import { SafeAreaView, WelcomeContainer, LoadingContainer } from './styles';
-import { Text } from '../Text';
+import { SafeAreaView, LoadingContainer } from './styles';
 import { Chart } from '../Charts';
 import { PeriodList } from '../PeriodList';
 import useFetchPlantData from '../../services/getPlantData';
@@ -10,8 +9,11 @@ import { ActivityIndicator } from 'react-native';
 import UnavailableData from '../UnavailableData';
 
 export function Main() {
-  const selectedPeriod = usePeriodSelectedStore((state) => state.selectedPeriod);
-  const { data, isFetching, isError, refetch } = useFetchPlantData(selectedPeriod);
+  const selectedPeriod = usePeriodSelectedStore(
+    (state) => state.selectedPeriod
+  );
+  const { data, isFetching, isError, refetch } =
+    useFetchPlantData(selectedPeriod);
 
   if (isError) {
     return (
@@ -23,11 +25,6 @@ export function Main() {
 
   return (
     <SafeAreaView>
-      <WelcomeContainer>
-        <Text size={30} weight={600}>
-          Bem vindo
-        </Text>
-      </WelcomeContainer>
       {isFetching ? (
         <LoadingContainer>
           <ActivityIndicator size={'large'} />

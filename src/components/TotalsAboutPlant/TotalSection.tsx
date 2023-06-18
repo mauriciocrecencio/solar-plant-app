@@ -1,6 +1,5 @@
-import { PlantDataTotals } from '../../interfaces';
 import { Text } from '../Text';
-import { TotalContainer, TotalsPlantContainer } from './styles';
+import { TotalContainer } from './styles';
 import { TotalsFormatted } from '../../constants';
 
 enum Totals {

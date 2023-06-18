@@ -24,7 +24,7 @@ export function LineChartComponent() {
       formatYLabel={(generation) => formatGeneration(generation)}
       data={data}
       width={Dimensions.get('window').width}
-      height={320}
+      height={Dimensions.get('screen').height / 2.3}
       yAxisSuffix=" kWh"
       getDotColor={(value, index) => {
         if (!expected[index]) {

@@ -11,13 +11,17 @@ export default function IsPlantGeneratingToday() {
   return (
     <Container>
       <LabelContainer>
-        <Text size={24}>Sua usina gerou</Text>
+        <Text weight={600} size={24}>
+          Sua usina gerou
+        </Text>
         <GeneratingLabel isGeneratingToday={isGeneratingToday}>
           <Text size={24} weight={600}>
             {isGeneratingToday ? `${totalKwhDaily} kWh` : '0 kWh'}
           </Text>
         </GeneratingLabel>
-        <Text size={24}>hoje! {isGeneratingToday ? '⚡️' : '😥'}</Text>
+        <Text weight={600} size={24}>
+          hoje! {isGeneratingToday ? '⚡️' : '😥'}
+        </Text>
       </LabelContainer>
     </Container>
   );

@@ -3,7 +3,7 @@ import { Colors } from '../../constants';
 
 export const Container = styled.View`
   border-radius: 4px;
-  margin: 24px 16px 0 16px;
+  margin: 16px 16px 0 16px;
   background: ${Colors.chartBackground};
   padding: 16px;
   border-radius: 8px;

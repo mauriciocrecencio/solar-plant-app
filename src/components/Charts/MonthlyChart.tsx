@@ -12,7 +12,9 @@ export function MonthlyChart() {
     datasets: [
       {
         data: generation,
-        colors: generation.map((g, i) => () => g < expected[i] ? '#f88b8b' : '#83fb8f')
+        colors: generation.map(
+          (g, i) => () => g < expected[i] ? '#f88b8b' : '#83fb8f'
+        )
       }
     ]
   };
@@ -47,7 +49,7 @@ export function MonthlyChart() {
       flatColor
       withCustomBarColorFromData
       style={{
-        paddingTop: 32,
+        paddingTop: 24,
         paddingRight: 70,
         borderRadius: 16
       }}

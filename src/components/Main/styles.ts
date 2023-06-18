@@ -13,7 +13,3 @@ export const SafeAreaView = styled.SafeAreaView`
   flex: 1;
   background: #fafafa;
 `;
-
-export const WelcomeContainer = styled.View`
-  padding: 8px 8px 0 14px;
-`;

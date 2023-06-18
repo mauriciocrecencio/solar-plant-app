@@ -4,7 +4,7 @@ import { Colors } from '../../constants';
 export const PeriodContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 16px;
+  margin-top: 8px;
 `;
 
 export const ButtonContainer = styled.TouchableOpacity`
