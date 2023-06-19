@@ -15,8 +15,7 @@ const colors = {
 export const propsForChartsByPeriod = {
   hourly: {
     segments: 8,
-    xLabelsOffset: 16,
-    verticalLabelRotation: 270,
+    xLabelsOffset: 4,
     withInnerLines: false,
     withOuterLines: false,
     chartConfig: {
